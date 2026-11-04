@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f0f3f8;
+    color: #253047;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    padding: 28px 20px;
+    background-color: #253047;
+    color: #ffffff;
+}
+
+.sidebar h2 {
+    margin-bottom: 28px;
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a {
+    padding: 10px 12px;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #315fd4;
+}
+
+main {
+    min-width: 0;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 20px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+    color: #606b7d;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card,
+.panel {
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #dce2eb;
+    border-radius: 10px;
+}
+
+.card {
+    flex: 1;
+    min-width: 180px;
+}
+
+.card p {
+    color: #606b7d;
+}
+
+.card h3 {
+    margin: 0;
+    color: #315fd4;
+    font-size: 30px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid #dce2eb;
+}
+
+th {
+    background-color: #f0f3f8;
+}
+
+.active {
+    color: #237346;
+}
+
+.inactive {
+    color: #606b7d;
+}
+
+footer {
+    color: #606b7d;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
