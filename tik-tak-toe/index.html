@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="game">
+        <h1>Крестики-нолики</h1>
+        <p class="description">Игра для двух игроков. Соберите три одинаковых знака в ряд.</p>
+        <p id="status" role="status">Ходит: X</p>
+
+        <div class="board" role="group" aria-label="Игровое поле">
+            <button class="cell" type="button" aria-label="Клетка 1: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 2: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 3: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 4: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 5: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 6: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 7: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 8: пусто"></button>
+            <button class="cell" type="button" aria-label="Клетка 9: пусто"></button>
+        </div>
+
+        <button id="restart" type="button">Начать заново</button>
+    </main>
+</body>
+</html>
