@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --green: #596D48;
+    --green-dark: #455638;
+    --text: #252525;
+    --border: #E5E7EB;
+    --panel: #ffffff;
+    --page: #f9fafb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--page);
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left photo panel */
+.sidebar {
+    position: relative;
+    display: flex;
+    flex: 0 0 37%;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=85');
+    background-position: center;
+    background-size: cover;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    height: 145px;
+    margin-top: 155px;
+    padding: 12px;
+    background: rgb(0 0 0 / 48%);
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.brand-logo {
+    width: 78px;
+    height: 105px;
+    object-fit: contain;
+}
+
+.photo-credit {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.photo-credit a {
+    color: inherit;
+}
+
+/* Right content */
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.intro {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    min-height: 260px;
+    padding: 55px 6% 35px;
+    background: var(--page);
+}
+
+.intro-copy {
+    max-width: 680px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.intro-copy p {
+    margin: 0 0 18px;
+}
+
+.intro-copy .you-want {
+    margin-bottom: 0;
+}
+
+.form-card {
+    padding: 22px 6% 30px;
+    background: var(--panel);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 12%);
+}
+
+.form-card h1 {
+    margin: 0 0 22px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    column-gap: clamp(24px, 5vw, 65px);
+    row-gap: 18px;
+    max-width: 680px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.field label {
+    margin-bottom: 5px;
+    color: #374151;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.field input {
+    width: 100%;
+    height: 32px;
+    padding: 5px 9px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #fff;
+    font: inherit;
+    font-size: 14px;
+}
+
+.field input:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 2px 3px 5px rgb(0 0 0 / 15%);
+}
+
+.field input:user-invalid {
+    border-color: #dc2626;
+}
+
+form button {
+    margin-top: 28px;
+    padding: 12px 38px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--green);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 18%);
+}
+
+form button:hover {
+    background: var(--green-dark);
+}
+
+form button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+.login-prompt {
+    padding: 25px 6%;
+    font-size: 14px;
+}
+
+.login-prompt p {
+    margin: 0;
+}
+
+.login-prompt a {
+    color: var(--green);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* Small screens */
+@media (max-width: 760px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex-basis: auto;
+        min-height: 260px;
+    }
+
+    .brand {
+        height: 105px;
+        margin-top: 65px;
+        font-size: 3.5rem;
+    }
+
+    .brand-logo {
+        width: 58px;
+        height: 80px;
+    }
+
+    .intro {
+        min-height: auto;
+        padding: 35px 7% 25px;
+    }
+
+    .form-card {
+        padding: 25px 7%;
+    }
+
+    .fields {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+
+    .login-prompt {
+        padding: 22px 7%;
+    }
+}
