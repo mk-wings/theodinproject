@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f0f3f8;
+    color: #253047;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.library {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 22px;
+}
+
+h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+.description,
+#empty-message {
+    color: #606b7d;
+}
+
+.panel,
+.book {
+    margin-bottom: 20px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #dce2eb;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    border: 1px solid #aab4c4;
+    border-radius: 6px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 18px;
+    background-color: #315fd4;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #244cae;
+}
+
+.book {
+    overflow-wrap: anywhere;
+}
+
+.delete-button {
+    background-color: #b63434;
+}
+
+.delete-button:hover {
+    background-color: #932626;
+}

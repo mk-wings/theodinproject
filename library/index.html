@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиотека</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="library">
+        <h1>Библиотека</h1>
+        <p class="description">Добавляйте книги в свою библиотеку.</p>
+
+        <section class="panel">
+            <h2>Добавить книгу</h2>
+            <form id="book-form">
+                <label for="title">Название книги</label>
+                <input type="text" id="title" placeholder="Введите название" required>
+
+                <label for="author">Автор</label>
+                <input type="text" id="author" placeholder="Введите имя автора" required>
+
+                <button type="submit">Добавить книгу</button>
+            </form>
+        </section>
+
+        <p id="message" role="status"></p>
+
+        <section>
+            <h2>Мои книги: <span id="book-count">0</span></h2>
+            <p id="empty-message">Пока нет книг. Добавьте первую книгу.</p>
+            <div id="book-list"></div>
+        </section>
+    </main>
+</body>
+</html>
